@@ -11,7 +11,7 @@
     "dynamodb",
     "dynamodb local"
   ],
-  "main": "launch.js",
+  "main": "lib/launch.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Obvious/local-dynamo.git"
