@@ -1,0 +1,22 @@
+{
+  "name": "local-dynamo",
+  "description": "A Node.js wrapper of AWS DynamoDB Local and utilities",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Obvious/local-dynamo",
+  "authors": [
+    "Xiao Ma <x@medium.com> (https://github.com/x-ma)"
+  ],
+  "keywords": [
+    "dynamo",
+    "dynamodb",
+    "dynamodb local"
+  ],
+  "main": "launch.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Obvious/local-dynamo.git"
+  },
+  "dependencies": {
+    "flags": "0.1.1"
+  }
+}
