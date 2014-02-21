@@ -1,17 +1,27 @@
-Amazon DynamoDB Local
-=====================
+README
+========
 
-Amazon DynamoDB Local is a small client-side database and server that mimics the Amazon DynamoDB service. Amazon DynamoDB Local enables you to write applications that use the Amazon DynamoDB API, without actually manipulating any tables or data in Amazon DynamoDB. Instead, all of the API actions are rerouted to Amazon DynamoDB Local. When your application creates a table or modifies data, those changes are written to a local database. This lets you save on provisioned throughput, data storage, and data transfer fees.
+For an overview of DynamoDB Local please refer to the documentation at http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.html 
 
-Amazon DynamoDB Local is 100% compatible with the Amazon DynamoDB API. When you are ready to deploy your application, you simply redirect it to Amazon DynamoDB, without having to modify your application code.
+Enhancements in this release 
+-----------------------------
 
-In addition, you do not need to have an Internet connection to use Amazon DynamoDB Local. You can develop applications without having to be connected to the network.
+This release provides support for in-memory execution and ability to provide the database file location. 
 
-Important Links
-===============
+DynamoDB Local added support for Global Secondary Indexes (GSI) in 2013-12-12 release. This release includes a fix for GSI query as reported by some customers. For an overview on GSI, refer to the documentation at http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html
 
-* License - http://aws.amazon.com/dynamodblocallicense  
-* AWS Service Terms and Conditions - http://aws.amazon.com/serviceterms
-* Online Documentation - http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.html
-* Amazon DynamoDB Best Practices, How-Tos, and Tools - http://aws.amazon.com/dynamodb/resources
+Running DynamoDB Local 
+-----------------------
+
+This release adds additional command line parameters. 
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar [-port <port-no.>] [-inMemory] [-dbPath <path>]
+
+Available Options:
+ -dbPath <path>     Specify the location of your database file. Default is
+                    the current directory.
+ -inMemory          When specified, DynamoDB Local will run in memory.
+ -port <port-no.>   Specify a port number. Default is 8000
+ -help              Display DynamoDB Local usage and options.
+
+Note that -inMemory and -dbPath options cannot be used together.
 
