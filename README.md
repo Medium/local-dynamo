@@ -12,8 +12,6 @@ Release notes can be found at http://aws.amazon.com/releasenotes/SDK/JavaScript
 npm install local-dynamo
 ```
 
-TODO: check DynamoDB Local license and register in NPM
-
 ## Usage
 
 From command line:
@@ -28,3 +26,10 @@ or inside a Node.js application:
 localDynamo = require('local-dynamo')
 localDynamo.launch('/database/dir', 4567)
 ```
+
+## AWS DynamoDB Local Versions
+
+Here is a list of the versions DynamoDB Local that `local-dynamo` uses.
+
+ * `0.0.1` -- `fr.28776.0.dynamodb_local_2013-09-12`
+ * `0.0.2` -- `fr.29205.0.dynamodb_local_2014-01-08`
