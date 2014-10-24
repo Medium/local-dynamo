@@ -31,6 +31,6 @@ localDynamo.launch('/database/dir', 4567)
 
 Here is a list of the versions DynamoDB Local that `local-dynamo` uses.
 
- * `0.0.1` -- `fr.28776.0.dynamodb_local_2013-09-12`
- * `0.0.2` -- `fr.29205.0.dynamodb_local_2014-01-08`
- * `0.0.3` -- `fr.nnnnn.0.dynamodb_local_2014-04-24`
+ * `0.0.1` -- `dynamodb_local_2013-09-12`
+ * `0.0.2` -- `dynamodb_local_2014-01-08`
+ * `0.0.3` -- `dynamodb_local_2014-04-24`
