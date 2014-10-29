@@ -1,19 +1,23 @@
 README
 ========
 
-For an overview of DynamoDB Local please refer to the documentation at http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.html 
+For an overview of DynamoDB Local please refer to the documentation at http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html
+
 
 Enhancements in this release 
 -----------------------------
 
-This release provides support for in-memory execution and ability to provide the database file location. 
+* Support for Query filters (http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html)
+* Support for conjunction operator 'OR' in Scan filter (http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html)
+* Support for improved conditional requests in PUT, UPDATE and DELETE requests. Updated documentation below
+** http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html
+** http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateItem.html
+** http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_DeleteItem.html
+* Bug fix in GSI query when projection type is ALL.
 
-DynamoDB Local added support for Global Secondary Indexes (GSI) in 2013-12-12 release. This release includes a fix for GSI query as reported by some customers. For an overview on GSI, refer to the documentation at http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html
+Running DynamoDB Local (has not changed from previous release)
+---------------------------------------------------------------
 
-Running DynamoDB Local 
------------------------
-
-This release adds additional command line parameters. 
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar [-port <port-no.>] [-inMemory] [-dbPath <path>]
 
 Available Options:
@@ -24,4 +28,3 @@ Available Options:
  -help              Display DynamoDB Local usage and options.
 
 Note that -inMemory and -dbPath options cannot be used together.
-
