@@ -1,7 +1,7 @@
 {
   "name": "local-dynamo",
   "description": "A Node.js wrapper of AWS DynamoDB Local and utilities",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/Obvious/local-dynamo",
   "licenses": [
     {
@@ -30,6 +30,6 @@
     "progress": "1.1.8"
   },
   "devDependencies": {
-    "aws-sdk": "^2.0.17"
+    "aws-sdk": "^2.0.22"
   }
 }
