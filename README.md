@@ -17,7 +17,7 @@ npm install local-dynamo
 From command line:
 
 ```bash
-$ node launch.js --database_dir=/database/dir --port=4567
+$ node bin/launch_local_dynamo.js --database_dir=/database/dir --port=4567
 ```
 
 or inside a Node.js application:
@@ -34,3 +34,4 @@ Here is a list of the versions DynamoDB Local that `local-dynamo` uses.
  * `0.0.1` -- `dynamodb_local_2013-09-12`
  * `0.0.2` -- `dynamodb_local_2014-01-08`
  * `0.0.3` -- `dynamodb_local_2014-04-24`
+ * `0.0.4` -- `dynamodb_local_2014-10-07`

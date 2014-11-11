@@ -4,16 +4,14 @@ README
 For an overview of DynamoDB Local please refer to the documentation at http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html
 
 
-Enhancements in this release 
+Enhancements in this release
 -----------------------------
 
-* Support for Query filters (http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html)
-* Support for conjunction operator 'OR' in Scan filter (http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html)
-* Support for improved conditional requests in PUT, UPDATE and DELETE requests. Updated documentation below
-** http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html
-** http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateItem.html
-** http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_DeleteItem.html
-* Bug fix in GSI query when projection type is ALL.
+http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html
+
+* Add support for document storage and retreival.
+* Add support for expressions.
+
 
 Running DynamoDB Local (has not changed from previous release)
 ---------------------------------------------------------------
