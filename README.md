@@ -27,6 +27,13 @@ localDynamo = require('local-dynamo')
 localDynamo.launch('/database/dir', 4567)
 ```
 
+If you want to run DynamoDB Local in memory, pass in `null`:
+
+```javascript
+localDynamo = require('local-dynamo')
+localDynamo.launch(null, 4567)
+```
+
 ## AWS DynamoDB Local Versions
 
 Here is a list of the versions DynamoDB Local that `local-dynamo` uses.
