@@ -1,7 +1,7 @@
 {
   "name": "local-dynamo",
   "description": "A Node.js wrapper of AWS DynamoDB Local and utilities",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/Medium/local-dynamo",
   "licenses": [
     {
@@ -24,7 +24,7 @@
     "url": "https://github.com/Medium/local-dynamo.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/nodeunit test"    
+    "test": "./node_modules/.bin/nodeunit test"
   },
   "dependencies": {
     "flags": "0.1.2",
@@ -34,6 +34,6 @@
   },
   "devDependencies": {
     "aws-sdk": "^2.0.22",
-    "nodeunit": "0.9.1"  
+    "nodeunit": "0.9.1"
   }
 }
