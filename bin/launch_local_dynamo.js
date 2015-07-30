@@ -11,7 +11,11 @@ flags.defineString('database_dir', '', 'The location for databases files. Run in
 flags.defineNumber('port', 4567, 'A port to run DynamoDB Local')
 flags.parse()
 
-var childProcess = localDynamo.launch(flags.get('database_dir') || null, flags.get('port'))
+var childProcess = localDynamo.launch({
+    dir: flags.get('database_dir') || null,
+    stdio: 'pipe',
+}, flags.get('port'))
+
 childProcess.stdout.pipe(process.stdout)
 childProcess.stderr.pipe(process.stderr)
 
