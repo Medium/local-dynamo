@@ -3,31 +3,29 @@
 var localDynamo = require('../lib/launch')
 
 exports.testMemory = function (test) {
-  var dynamo = localDynamo.launch({
+  localDynamo.launch({
     port: 8676,
-    heap: '512m'
-  })
-  dynamo.stdout.on('data', function (data) {
-    console.log('stdout', data.toString())
-  })
-  dynamo.stderr.on('data', function (data) {
-    console.log('stderr', data.toString())
-  })
+    heap: '512m',
+    stdio: 'inherit',
+    version: '2015-07-16_1.0'
+  }, function(err, dynamo){
+    if (err) throw err
 
-  var finished = false
+    var finished = false
 
-  dynamo.on('exit', function (code) {
-    if (finished) return
+    dynamo.on('exit', function (code) {
+      if (finished) return
 
-    finished = true
-    test.ok(false, 'Unexpected exit code ' + code)
-    test.done()
+      finished = true
+      test.ok(false, 'Unexpected exit code ' + code)
+      test.done()
+    })
+
+    // If everything goes well after 5 seconds, then we're done!
+    setTimeout(function () {
+      finished = true
+      dynamo.kill()
+      test.done()
+    }, 5000).unref()
   })
-
-  // If everything goes well after 5 seconds, then we're done!
-  setTimeout(function () {
-    finished = true
-    dynamo.kill()
-    test.done()
-  }, 5000).unref()
 }
