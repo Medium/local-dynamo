@@ -34,6 +34,31 @@ localDynamo = require('local-dynamo')
 localDynamo.launch(null, 4567)
 ```
 
+If you want DynamoDB to use a single file instead of using separate files for each credential and region:
+
+```javascript
+localDynamo = require('local-dynamo')
+localDynamo.launch({shared: true}, 4567)
+```
+
+This will run DynamoDB in memory and all clients will be able to access the same tables
+
+### Custom configurations
+
+If you want to specify the port, directory, enable sharing, control the heap size of the DynamoDB instance then
+you can do the following (runs DynamoDB on port 8080 with a heap size of 512 MB)
+
+```javascript
+localDynamo = require('local-dynamo')
+let options = {
+    shared: true,
+    dir: "/valid/database/directory",
+    port: 8080,
+    heap: '512m'
+};
+localDynamo.launch()
+```
+
 ## AWS DynamoDB Local Versions
 
 Here is a list of the versions DynamoDB Local that `local-dynamo` uses.
