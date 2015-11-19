@@ -30,9 +30,13 @@
     "test": "./node_modules/.bin/nodeunit test"
   },
   "dependencies": {
+    "download": "~4.2.0",
+    "download-status": "~2.2.1",
     "flags": "0.1.2",
+    "home-or-tmp": "~2.0.0",
     "kew": "0.4.0",
     "metrics": "0.1.8",
+    "path-exists": "~1.0.0",
     "progress": "1.1.8"
   },
   "devDependencies": {
