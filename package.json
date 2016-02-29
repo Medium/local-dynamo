@@ -14,7 +14,7 @@
     "dynamodb local"
   ],
   "bin": {
-    "local-dynamo": "./bin/launch_local_dynamo"
+    "local-dynamo": "./bin/launch_local_dynamo.js"
   },
   "main": "lib/launch.js",
   "repository": {
