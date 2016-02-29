@@ -3,12 +3,7 @@
   "description": "A Node.js wrapper of AWS DynamoDB Local and utilities",
   "version": "0.1.2",
   "homepage": "https://github.com/Medium/local-dynamo",
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-    }
-  ],
+  "license": "Apache-2.0",
   "author": {
     "name": "Xiao Ma",
     "email": "x@medium.com"
