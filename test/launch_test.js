@@ -5,7 +5,8 @@ var localDynamo = require('../lib/launch')
 exports.testMemory = function (test) {
   var dynamo = localDynamo.launch({
     port: 8676,
-    heap: '512m'
+    heap: '512m',
+    stdio: 'pipe'
   })
   dynamo.stdout.on('data', function (data) {
     console.log('stdout', data.toString())
