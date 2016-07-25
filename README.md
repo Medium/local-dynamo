@@ -34,6 +34,26 @@ localDynamo = require('local-dynamo')
 localDynamo.launch(null, 4567)
 ```
 
+## Configuration
+`launch` allows for additional options
+```javascript
+localDynamo = require('local-dynamo')
+localDynamo.launch({
+  port: 4567,
+  sharedDb: true,
+  heap: '512m'
+})
+```
+
+| option | description | default |
+| --- | --- | --- |
+| port | The port number that DynamoDB will use to communicate with your application | 8000 |
+| detached | Prepare child to run independently of its parent process | false |
+| stdio | Configure the pipes that are established between the parent and child process | 'ignore' |
+| heap | Heap size | null |
+| sharedDb | DynamoDB will use a single database file, instead of using separate files for each credential and region | null |
+| dir | The directory where DynamoDB will write its database file | null (default to inMemory) |
+
 ## AWS DynamoDB Local Versions
 
 Here is a list of the versions DynamoDB Local that `local-dynamo` uses.
