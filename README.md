@@ -1,5 +1,7 @@
 # A Node.js wrapper of [AWS DynamoDB Local](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.html)
 
+[![Build Status](https://travis-ci.org/Medium/local-dynamo.svg?branch=master)](https://travis-ci.org/Medium/local-dynamo)
+
 This is a thin wrapper of the [AWS DynamoDB Local](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.html).
 You can start the DynamoDB Local within a Node.js program and easily
 specify where the database files should be.
