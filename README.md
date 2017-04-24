@@ -68,3 +68,4 @@ Here is a list of the versions DynamoDB Local that `local-dynamo` uses.
  * `0.0.6` -- `dynamodb_local_2015-04-27`
  * `0.2.0` -- `dynamodb_local_2016-01-05`
  * `0.3.0` -- `dynamodb_local_2016-05-17`
+ * `0.5.0` -- `dynamodb_local_2017-01-24`
