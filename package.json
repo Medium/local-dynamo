@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "flags": "0.1.3",
-    "kew": "git+https://github.com/Medium/kew#3b0a2d7",
+    "kew": "git+https://github.com/Medium/kew#a9a2ef0",
     "metrics": "0.1.11",
     "progress": "2.0.0"
   },
